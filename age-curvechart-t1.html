@@ -1,57 +1,72 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A1123366 Data Story｜屏東縣新園鄉動畫式曲線圖 A11-A33</title>
   <style>
     * {
       box-sizing: border-box;
     }
+
     body {
       margin: 0;
       padding: 0;
       font-family: "Noto Sans TC", Arial, sans-serif;
-      background-color: #f5f7fa;
+      background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
     }
+
     .card {
-      max-width: 960px;
-      width: 90%;
-      padding: 30px 20px;
+      max-width: 1000px;
+      width: 95%;
       background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      padding: 40px 30px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
       text-align: center;
+      border: 1px solid #e0e0e0;
     }
+
     .card h1 {
-      font-size: 20px;
-      color: #333;
-      margin-bottom: 20px;
+      font-size: 24px;
+      color: #2e7d32;
+      margin-bottom: 24px;
+      line-height: 1.5;
     }
+
     .card p {
-      font-size: 15px;
-      line-height: 1.8;
-      color: #333;
-      text-align: left;
-      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 1.9;
+      color: #444;
+      text-align: justify;
+      margin-bottom: 32px;
     }
+
     iframe {
       width: 100%;
       height: 600px;
-      border: none;
-      border-radius: 8px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
+
     @media (max-width: 600px) {
+      .card {
+        padding: 25px 20px;
+      }
+
       .card h1 {
-        font-size: 18px;
+        font-size: 20px;
       }
+
       .card p {
-        font-size: 14px;
+        font-size: 15px;
       }
+
       iframe {
         height: 400px;
       }
@@ -63,11 +78,11 @@
     <h1>My data story：這是動畫式屏東縣新園鄉 A11 至 A33 的 curve chart<br>呈現屏東縣新園鄉年長者的年齡分布、身心障礙程度，以及身體健康狀況。</h1>
     
     <p>
-  這張圖透過動畫式，協助我們看清楚「屏東縣新園鄉」年長者的年齡分布及健康長照變化。<br>
-  每條線代表不同的健康程度，像是完全健康、輕微甚至是極度不便，這些變化，其實就發生在我們周遭。<br>
-  這不只是圖表，它其實是一個提醒：我們可以從這些趨勢去想，未來我們需要怎樣的醫療資源、照顧系統，甚至是如何照顧自己的家人。
-   </p>
-      
+      這張圖透過動畫式，協助我們看清楚「屏東縣新園鄉」年長者的年齡分布及健康長照變化。<br>
+      每條線代表不同的健康程度，像是完全健康、輕微甚至是極度不便，這些變化，其實就發生在我們周遭。<br>
+      這不只是圖表，它其實是一個提醒：我們可以從這些趨勢去想，未來我們需要怎樣的醫療資源、照顧系統，甚至是如何照顧自己的家人。
+    </p>
+
     <iframe src="https://plotdb.io/v/chart/37111" allowfullscreen></iframe>
   </div>
 </body>

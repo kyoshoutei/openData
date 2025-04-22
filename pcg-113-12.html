@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>屏東縣村里級熱圖</title>
     <style>
-        /* 基本樣式設置 */
         * {
             margin: 0;
             padding: 0;
@@ -13,76 +12,74 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', 'Noto Sans TC', sans-serif;
             display: flex;
             flex-direction: row;
             height: 100vh;
-            background: linear-gradient(120deg, #e0f7fa, #f1f8e9);
+            background: linear-gradient(135deg, #e8f5e9, #f1f8f4);
             overflow: hidden;
         }
 
-        /* 左側文字區域 */
         .description {
-            flex: 1;
+            flex: 1.2;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-            background: #ffffff;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-            border-right: 1px solid #ccc;
+            padding: 30px;
+            background: #f0fdf4;
+            border-right: 1px solid #b2dfdb;
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.05);
         }
 
         .description-content {
             max-width: 90%;
+            padding: 35px;
+            background: #ffffff;
+            border: 2px dashed #81c784;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
             text-align: center;
-            border: 3px solid #0288d1;
-            padding: 30px;
-            border-radius: 15px;
-            background: #f9f9f9;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
         .description-content h1 {
-            font-size: 2em;
-            color: #0288d1;
-            margin-bottom: 20px;
+            font-size: 2.2em;
+            color: #558b2f;
+            margin-bottom: 25px;
+            font-weight: bold;
         }
 
         .description-content p {
-            font-size: 1.2em;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 15px;
+            font-size: 1.15em;
+            line-height: 1.9;
+            color: #4e6b50;
+            margin-bottom: 18px;
         }
 
-        /* 右側圖表區域 */
         .chart {
-            flex: 2; /* 右側較大比例 */
+            flex: 2;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 25px;
         }
 
         iframe {
-            width: 90%;
-            height: 90%;
-            border: 5px solid #0288d1;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 92%;
+            height: 92%;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
         }
 
-        /* 響應式設計，確保小螢幕設備顯示良好 */
         @media (max-width: 768px) {
             body {
                 flex-direction: column;
             }
 
             .description, .chart {
-                flex: unset;
                 width: 100%;
                 height: 50%;
+                padding: 20px;
             }
 
             iframe {
@@ -100,10 +97,7 @@
                 本熱圖展示了屏東縣村里層級的人口分布與變化趨勢，透過視覺化方式，讓使用者能夠快速掌握地理與人口資訊。
             </p>
             <p>
-               屏東縣村里人口圖表呈現出明顯的城鄉差距：人口集中於屏東市、潮州鎮等都市化區域，而山地鄉如霧台、三地門則多為人口稀少的村里。多數村里人口落在中低範圍，僅少數村里人口破6,000，形成明顯的長尾現象。這顯示屏東縣整體發展呈現「人口向城鎮集中、原鄉地區邊緣化」的趨勢，未來在資源分配與政策設計上，應考量此不均衡現象。
-            </p>
-            <p>
-                
+                資料顯示城鄉間人口明顯不均，多數人口集中於都市區，如屏東市與潮州鎮；而山地原鄉如霧台、三地門則人口稀少，反映屏東縣發展結構呈現明顯集中化現象。
             </p>
         </div>
     </div>

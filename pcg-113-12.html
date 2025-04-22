@@ -3,65 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>a1123366 design: pcg 113-12 population</title>
+    <title>屏東縣村里級熱圖</title>
     <style>
-        body {
+        /* 基本樣式設置 */
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
             display: flex;
             flex-direction: row;
             height: 100vh;
-            background-color: #f0f0f0;
+            background: linear-gradient(120deg, #e0f7fa, #f1f8e9);
+            overflow: hidden;
         }
 
+        /* 左側文字區域 */
         .description {
-            flex: 1; /* 左側區域比例 */
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
-            box-sizing: border-box;
-            background-color: #ffffff;
+            background: #ffffff;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
             border-right: 1px solid #ccc;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
 
         .description-content {
-            max-width: 80%;
+            max-width: 90%;
             text-align: center;
-            border: 2px solid #0078d7;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 3px solid #0288d1;
+            padding: 30px;
+            border-radius: 15px;
+            background: #f9f9f9;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .description h1 {
-            font-size: 1.8em;
-            color: #333;
+        .description-content h1 {
+            font-size: 2em;
+            color: #0288d1;
             margin-bottom: 20px;
         }
 
-        .description p {
+        .description-content p {
             font-size: 1.2em;
-            line-height: 1.6;
+            line-height: 1.8;
             color: #555;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
+        /* 右側圖表區域 */
         .chart {
-            flex: 2; /* 右側區域比例，設為左側的兩倍 */
+            flex: 2; /* 右側較大比例 */
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
-            box-sizing: border-box;
         }
 
         iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
+            width: 90%;
+            height: 90%;
+            border: 5px solid #0288d1;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 響應式設計，確保小螢幕設備顯示良好 */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .description, .chart {
+                flex: unset;
+                width: 100%;
+                height: 50%;
+            }
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
         }
     </style>
 </head>
@@ -73,10 +100,10 @@
                 本熱圖展示了屏東縣村里層級的人口分布與變化趨勢，透過視覺化方式，讓使用者能夠快速掌握地理與人口資訊。
             </p>
             <p>
-                使用者可以點擊各縣市中的鄉鎮，進一步查看村里層級的詳細資料。這對於規劃政策或了解地方發展非常有幫助。
+                使用者可以點擊地圖中的鄉鎮，進一步查看村里層級的詳細資料。這對於政策規劃及地方發展的分析非常有幫助。
             </p>
             <p>
-                熱圖數據以村里為主，提供了精確且深入的數據視角，適用於學術研究、政府規劃以及社會科學分析。
+                熱圖數據以村里為主，提供精確且深入的數據視角，適用於學術研究、政府規劃及社會科學分析。
             </p>
         </div>
     </div>

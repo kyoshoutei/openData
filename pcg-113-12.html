@@ -11,20 +11,42 @@
             display: flex;
             flex-direction: row;
             height: 100vh;
+            background-color: #f0f0f0;
         }
 
         .description {
             flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 20px;
             box-sizing: border-box;
-            overflow-y: auto;
-            background-color: #f9f9f9;
+            background-color: #ffffff;
             border-right: 1px solid #ccc;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .description-content {
+            max-width: 80%;
+            text-align: center;
+            border: 2px solid #0078d7;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .description h1 {
-            font-size: 1.5em;
+            font-size: 1.8em;
+            color: #333;
             margin-bottom: 20px;
+        }
+
+        .description p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 10px;
         }
 
         .chart {
@@ -45,13 +67,18 @@
 </head>
 <body>
     <div class="description">
-        <h1>屏東縣村里級熱圖</h1>
-        <p>
-            透過點擊縣市中的鄉鎮再顯示村里細節，資料以村里為主。
-        </p>
-        <p>
-            本熱圖可視化村里層級的人口分布與變化趨勢，幫助使用者深入了解屏東縣的地理與人口資訊。
-        </p>
+        <div class="description-content">
+            <h1>屏東縣村里級熱圖</h1>
+            <p>
+                本熱圖展示了屏東縣村里層級的人口分布與變化趨勢，透過視覺化方式，讓使用者能夠快速掌握地理與人口資訊。
+            </p>
+            <p>
+                使用者可以點擊各縣市中的鄉鎮，進一步查看村里層級的詳細資料。這對於規劃政策或了解地方發展非常有幫助。
+            </p>
+            <p>
+                熱圖數據以村里為主，提供了精確且深入的數據視角，適用於學術研究、政府規劃以及社會科學分析。
+            </p>
+        </div>
     </div>
     <div class="chart">
         <iframe src="https://plotdb.io/v/chart/37192" allowfullscreen="true"></iframe>

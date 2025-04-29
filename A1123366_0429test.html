@@ -25,8 +25,8 @@
     .container {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      gap: 20px;
+      gap: 40px;
+      flex-wrap: wrap;
     }
 
     .card {
@@ -34,16 +34,14 @@
       border: 3px solid #b89b82;
       border-radius: 16px;
       box-shadow: 0 12px 24px rgba(130, 90, 60, 0.25);
-      width: 45%; /* 調整寬度以適應左右並排 */
+      width: 45%;
       min-width: 320px;
       overflow: hidden;
       transition: transform 0.3s, box-shadow 0.3s;
-      display: flex;
-      flex-direction: row; /* 將圖表和文字放在同一行 */
     }
 
     .card iframe {
-      width: 60%; /* 圖表部分的寬度 */
+      width: 100%;
       height: 380px;
       border: none;
     }
@@ -55,10 +53,13 @@
       color: #5c4533;
       background-color: #faf6f1;
       letter-spacing: 1px;
-      flex-grow: 1; /* 文字部分會佔據剩餘空間 */
+    }
+
+    .analysis-container {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      gap: 40px;
+      align-items: flex-start;
     }
 
     .analysis {
@@ -68,6 +69,7 @@
       border-radius: 18px;
       box-shadow: 0 8px 16px rgba(120, 80, 50, 0.2);
       line-height: 1.8;
+      width: 55%; /* 確保分析區域有足夠寬度 */
     }
 
     .analysis h2 {
@@ -111,24 +113,26 @@
     </div>
   </div>
 
-  <div class="analysis">
-    <h2>高齡人口趨勢分析</h2>165532
-    <p><strong>65至79歲人口數：</strong>約為 <strong>128,643人</strong>，佔整體高齡人口（65歲以上）的 <strong>約 77.71%</strong>。</p>
-    <p><strong>80至100歲人口數：</strong>約為 <strong>36,889人</strong>，佔 <strong>約 22.29%</strong>。</p>
-    <p>從65-79歲與80歲以上人口占比來看，屏東縣高齡化以「初老族群」為主，但80歲以上族群也展現逐年上升趨勢，隱含出未來10至20年內，超高齡社會（80歲以上人口占比達總人口7%以上）的壓力日益增加。</p>
+  <div class="analysis-container">
+    <div class="analysis">
+      <h2>高齡人口趨勢分析</h2>
+      <p><strong>65至79歲人口數：</strong>約為 <strong>131,218人</strong>，佔整體高齡人口（65歲以上）的 <strong>約 77.76%</strong>。</p>
+      <p><strong>80至100歲人口數：</strong>約為 <strong>37,528人</strong>，佔 <strong>約 22.24%</strong>。</p>
+      <p>從65-79歲與80歲以上人口占比來看，屏東縣高齡化以「初老族群」為主，但80歲以上族群也展現逐年上升趨勢，隱含出未來10至20年內，超高齡社會（80歲以上人口占比達總人口7%以上）的壓力日益增加。</p>
 
-    <h2>地區差異觀察</h2>
-    <p>在村里級資料中，部分地區65-79歲人口比例明顯偏高，特別是偏鄉與農業村落，例如牡丹鄉、三地門鄉等地，顯示出青年外流、少子化與老化同步進行的現象。相對地，市中心或重劃區（如屏東市部分里別）則呈現高齡人口密度稍低的情況。</p>
+      <h2>地區差異觀察</h2>
+      <p>在村里級資料中，部分地區65-79歲人口比例明顯偏高，特別是偏鄉與農業村落，例如牡丹鄉、三地門鄉等地，顯示出青年外流、少子化與老化同步進行的現象。相對地，市中心或重劃區（如屏東市部分里別）則呈現高齡人口密度稍低的情況。</p>
 
-    <h2>政策建議</h2>
-    <ul>
-      <li>積極推動在地安養、社區照護，讓初老族群提前介入健康管理。</li>
-      <li>針對80歲以上群體，強化醫療可近性及居家照護資源，例如推動巡迴醫療與社區日照中心。</li>
-      <li>增加銀髮就業機會，活化65-79歲人口的社會參與，減緩高齡化負面衝擊。</li>
-    </ul>
+      <h2>政策建議</h2>
+      <ul>
+        <li>積極推動在地安養、社區照護，讓初老族群提前介入健康管理。</li>
+        <li>針對80歲以上群體，強化醫療可近性及居家照護資源，例如推動巡迴醫療與社區日照中心。</li>
+        <li>增加銀髮就業機會，活化65-79歲人口的社會參與，減緩高齡化負面衝擊。</li>
+      </ul>
 
-    <h2>未來展望</h2>
-    <p>以80歲為平均壽命門檻，推估未來20年，屏東縣將有一波龐大的80歲以上人口潮。政府與社區應未雨綢繆，從現在就規劃高齡友善城市、長照人力培育與高齡建築環境改善，以迎接即將到來的超高齡社會挑戰。</p>
+      <h2>未來展望</h2>
+      <p>以80歲為平均壽命門檻，推估未來20年，屏東縣將有一波龐大的80歲以上人口潮。政府與社區應未雨綢繆，從現在就規劃高齡友善城市、長照人力培育與高齡建築環境改善，以迎接即將到來的超高齡社會挑戰。</p>
+    </div>
   </div>
 
 </body>

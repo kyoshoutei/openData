@@ -23,6 +23,27 @@
       letter-spacing: 1px;
     }
 
+    /* 新增的按鈕容器 */
+    .button-container {
+      text-align: right;
+      margin-bottom: 30px;
+    }
+
+    #scrollButton {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background-color: #7c3d26;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #scrollButton:hover {
+      background-color: #5b2b1d;
+    }
+
     ul, h4 {
       color: #5c4533;
     }
@@ -145,11 +166,39 @@
         width: 80%;
       }
     }
+
+    /* 新增的按鈕樣式 */
+    .idea-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .idea-text {
+      flex: 1;
+      text-align: center;
+    }
+
+    .idea-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .idea-image img {
+      max-width: 45%;
+      height: auto;
+    }
   </style>
 </head>
 <body>
 
   <h1>屏東縣村里級熱圖－65歲以上人口</h1>
+
+  <!-- 按鈕容器 -->
+  <div class="button-container">
+    <button id="scrollButton" onclick="scrollToIdeaSection()">跳至集點子大賽</button>
+  </div>
 
   <div class="container">
     <div class="card">
@@ -183,10 +232,10 @@
     <p>以80歲為平均壽命門檻，推估未來20年，屏東縣將有一波龐大的80歲以上人口潮。政府與社區應未雨綢繆，從現在就規劃高齡友善城市、長照人力培育與高齡建築環境改善，以迎接即將到來的超高齡社會挑戰。</p>
   </div>
 
-<div class="idea-section">
-  <div class="idea-flex">
-    <div class="idea-text">
-      <h1>˗ˏˋ 集點子大賽 ˎˊ˗</h1>
+  <div class="idea-section" id="idea-section">
+    <div class="idea-flex">
+      <div class="idea-text">
+        <h1>˗ˏˋ 集點子大賽 ˎˊ˗</h1>
       <h2>不老玩家 - 電子遊戲與年長者的連結</h2>
     </div>
 
@@ -211,32 +260,13 @@
     </ul>
 
     <p><strong>許多年長者因地理與生活方式受限，逐漸與科技世代脫節，社交圈縮小、活動量減少，影響身心與社會健康，若能結合電子遊戲互動模式，透過體感裝置(如 Switch)進行簡單遊戲，讓年長者以自然動作操作，不僅能增強協調性、靈活性與心肺功能，亦促進思考能力與社交互動，且無論日常或團聚時，透過遊戲與家人、朋友同樂，能拉近情感距離，提升生活參與感與自我價值感，電子遊戲除娛樂功能，也能成為情感陪伴與社交橋樑，幫助年長者融入現代社會，活出精彩。</strong></p>
+    </div>
   </div>
-</div>
 
-<style>
-  .idea-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .idea-text {
-    flex: 1;
-    text-align: center;
-  }
-
-  .idea-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
-
-  .idea-image img {
-    max-width: 45%;
-    height: auto;
-  }
-</style>
-
+  <script>
+    function scrollToIdeaSection() {
+      document.getElementById('idea-section').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>

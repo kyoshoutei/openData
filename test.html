@@ -21,11 +21,14 @@
       margin-bottom: 30px;
       color: #5b3b2b;
       letter-spacing: 1px;
-      display: inline-block;
-      margin-right: 20px;
     }
 
-    /* 新增的按鈕樣式 */
+    /* 新增的按鈕容器 */
+    .button-container {
+      text-align: right;
+      margin-bottom: 30px;
+    }
+
     #scrollButton {
       padding: 10px 20px;
       font-size: 1.2em;
@@ -163,13 +166,39 @@
         width: 80%;
       }
     }
+
+    /* 新增的按鈕樣式 */
+    .idea-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .idea-text {
+      flex: 1;
+      text-align: center;
+    }
+
+    .idea-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .idea-image img {
+      max-width: 45%;
+      height: auto;
+    }
   </style>
 </head>
 <body>
 
   <h1>屏東縣村里級熱圖－65歲以上人口</h1>
-  <!-- 新增的按鈕 -->
-  <button id="scrollButton" onclick="scrollToIdeaSection()">跳至集點子大賽</button>
+
+  <!-- 按鈕容器 -->
+  <div class="button-container">
+    <button id="scrollButton" onclick="scrollToIdeaSection()">跳至集點子大賽</button>
+  </div>
 
   <div class="container">
     <div class="card">
@@ -219,44 +248,13 @@
       <h3>一、發現問題：高齡人口增加，社會參與不足</h3>
       <p>根據資料顯示，屏東縣65歲以上人口已達165,532人，其中65-79歲族群佔約77%。雖多數長者身體尚可活動，但因交通不便、資源不足或生活圈限制，逐漸與社會脫節，容易陷入孤立、退化的生活狀態。</p>
 
-      <h3>二、需求延伸：如何讓年長者「活躍老化」？</h3>
-      <p>65-79歲族群多具備基本學習力與動能，是活化潛力族群。若能提供具趣味性、互動性的參與機會，不僅有助於身心健康，也能促進跨代交流與家庭關係。</p>
+      <h3>二、需求延伸：遊戲化介面，拉近長者與社會距離</h3>
+      <p>電子遊戲已逐漸成為年輕人娛樂的主流，對於年長者來說，遊戲不僅能娛樂放鬆，也可促進其心智活化，並能讓他們透過遊戲平台與社會保持聯繫。建議開發針對長者的簡單遊戲平台，並針對身心障礙者進行設計優化。</p>
 
-      <h3>三、點子提出：「不老玩家」</h3>
-      <p>透過電子遊戲（如 Nintendo Switch）結合體感裝置，設計簡易、安全、有趣的互動遊戲：</p>
-      <ul>
-        <li>提升年長者的平衡感、協調性與心肺功能</li>
-        <li>訓練思考力與記憶力，延緩退化</li>
-        <li>在家中或社區中心，與家人、朋友共玩，促進情感連結</li>
-      </ul>
-
-      <p><strong>許多年長者因地理與生活方式受限，逐漸與科技世代脫節，社交圈縮小、活動量減少，影響身心與社會健康，若能結合電子遊戲互動模式，透過體感裝置(如 Switch)進行簡單遊戲，讓年長者以自然動作操作，不僅能增強協調性、靈活性與心肺功能，亦促進思考能力與社交互動，且無論日常或團聚時，透過遊戲與家人、朋友同樂，能拉近情感距離，提升生活參與感與自我價值感，電子遊戲除娛樂功能，也能成為情感陪伴與社交橋樑，幫助年長者融入現代社會，活出精彩。</strong></p>
+      <h3>三、具體建議：社區整合平台、延伸社交功能</h3>
+      <p>針對屏東縣的長者族群，應設立專門的社區遊戲平台，將遊戲化介面與社交功能結合，讓長者能在遊戲過程中與親友建立聯繫並進行互動，從而提升其社會參與感，減少孤獨感。</p>
     </div>
   </div>
-
-  <style>
-    .idea-flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .idea-text {
-      flex: 1;
-      text-align: center;
-    }
-
-    .idea-image {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
-
-    .idea-image img {
-      max-width: 45%;
-      height: auto;
-    }
-  </style>
 
   <script>
     function scrollToIdeaSection() {

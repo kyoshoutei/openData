@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>屏東縣村里級熱圖 - 65歲以上</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Noto Serif TC', serif;
+      margin: 40px auto;
+      background: linear-gradient(to bottom right, #fef9f4, #f5f0eb);
+      color: #4a4a4a;
+      max-width: 1200px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.4em; /* 增大標題 */
+      margin-bottom: 30px;
+      color: #5b3b2b;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-evenly;
+      margin-bottom: 60px;
+    }
+
+    .card {
+      background: #fffdf8;
+      border: 3px solid #b89b82;
+      border-radius: 16px;
+      box-shadow: 0 12px 24px rgba(130, 90, 60, 0.2);
+      width: 45%;
+      min-width: 320px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 30px rgba(130, 90, 60, 0.35);
+    }
+
+    .card iframe {
+      width: 100%;
+      height: 380px;
+      border: none;
+    }
+
+    .card .description {
+      padding: 12px;
+      font-size: 16px;
+      color: #5c4533;
+      background-color: #faf6f1;
+    }
+
+    .analysis {
+      background: #fff9f5;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 8px 16px rgba(120, 80, 50, 0.2);
+      line-height: 1.8;
+      margin-top: 50px;
+    }
+
+    .analysis h2 {
+      color: #7a4e36;
+      margin-top: 30px;
+      font-size: 1.8em;
+      border-bottom: 2px solid #c8b6a0;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    .analysis p, .analysis ul {
+      color: #5c4533;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .analysis ul {
+      padding-left: 20px;
+    }
+
+    .analysis li {
+      margin-bottom: 8px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>屏東縣村里級熱圖－65歲以上人口</h1>
+
+  <div class="container">
+    <div class="card">
+      <iframe src="https://plotdb.io/v/chart/37286" allowfullscreen="true"></iframe>
+      <div class="description">
+        65-79歲總人口數
+      </div>
+    </div>
+    <div class="card">
+      <iframe src="https://plotdb.io/v/chart/37289" allowfullscreen="true"></iframe>
+      <div class="description">
+        80-100歲總人口數
+      </div>
+    </div>
+  </div>
+
+  <div class="analysis">
+    <h2>高齡人口趨勢分析</h2>
+    <p><strong>65至100歲總人口數：</strong>約為 <strong>165,532人</strong>。</p>
+    <p><strong>65至79歲人口數：</strong>約為 <strong>128,643人</strong>，佔整體高齡人口（65歲以上）的 <strong>約 77.71%</strong>。</p>
+    <p><strong>80至100歲人口數：</strong>約為 <strong>36,889人</strong>，佔 <strong>約 22.29%</strong>。</p>
+    <p>從65-79歲與80歲以上人口占比來看，屏東縣高齡化以「初老族群」為主，但80歲以上族群也展現逐年上升趨勢，隱含出未來10至20年內，超高齡社會（80歲以上人口占比達總人口7%以上）的壓力日益增加。</p>
+
+    <h2>地區差異觀察</h2>
+    <p>在村里級資料中，部分地區65-79歲人口數明顯偏高，可能因醫療普遍及生活機能方便等原因，特別是市中心或重劃區（如屏東市部分里別），而相對地，偏鄉與農業村落，例如牡丹鄉、三地門鄉等地，則因靠近山區、生活機能不佳以及較無年輕人陪伴照顧而呈現高齡人口數稍低的情況。</p>
+
+    <h2>政策建議</h2>
+    <ul>
+      <li>積極推動在地安養、社區照護，讓初老族群提前介入健康管理。</li>
+      <li>針對80歲以上群體，強化醫療可近性及居家照護資源，例如推動巡迴醫療與社區日照中心。</li>
+      <li>增加銀髮就業機會，活化65-79歲人口的社會參與，減緩高齡化負面衝擊。</li>
+    </ul>
+
+    <h2>未來展望</h2>
+    <p>以80歲為平均壽命門檻，推估未來20年，屏東縣將有一波龐大的80歲以上人口潮。政府與社區應未雨綢繆，從現在就規劃高齡友善城市、長照人力培育與高齡建築環境改善，以迎接即將到來的超高齡社會挑戰。</p>
+  </div>
+
+</body>
+</html>

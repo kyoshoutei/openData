@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>資料中的雨：設計思維與商業智慧的實踐</title>
-  <meta name="viewport" content="width=600, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(135deg, #f7fafc 0%, #e9e4f0 100%);
+      background: linear-gradient(135deg, #f7f3ff, #e9e4f0);
       min-height: 100vh;
       margin: 0;
       font-family: 'Noto Serif TC', serif;
@@ -15,75 +15,71 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 20px;
     }
     header {
       margin-top: 40px;
-      margin-bottom: 24px;
       text-align: center;
     }
     h1 {
       font-family: 'Pacifico', cursive;
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       color: #7c4dff;
-      letter-spacing: 2px;
-      margin: 0 0 12px 0;
-      text-shadow: 2px 2px 8px #e1bee7;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 6px #d1b3ff;
     }
     .button-group {
-      margin-bottom: 20px;
+      margin: 24px 0;
     }
     .button-group button {
-      font-family: 'Noto Serif TC', serif;
-      font-size: 1rem;
-      padding: 10px 16px;
-      margin: 0 8px;
-      border: none;
-      border-radius: 8px;
       background-color: #7c4dff;
+      border: none;
       color: white;
+      padding: 12px 20px;
+      margin: 0 8px;
+      border-radius: 8px;
+      font-size: 1rem;
       cursor: pointer;
-      box-shadow: 0 2px 6px rgba(124,77,255,0.2);
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, transform 0.2s;
     }
     .button-group button:hover {
       background-color: #9575cd;
+      transform: scale(1.05);
     }
-    .container, .description {
-      background: rgba(255,255,255,0.85);
-      border-radius: 18px;
-      box-shadow: 0 4px 24px rgba(124,77,255,0.08);
-      padding: 36px 28px 28px 28px;
-      max-width: 700px;
-      width: 90vw;
-      margin-bottom: 40px;
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 6px 24px rgba(124, 77, 255, 0.15);
+      padding: 30px;
+      max-width: 800px;
+      width: 95%;
       display: none;
+      transition: all 0.3s ease;
     }
-    .container.active, .description.active {
+    .container.active {
       display: block;
     }
     iframe {
-      display: block;
-      margin: 0 auto;
-      border-radius: 10px;
+      width: 100%;
+      height: 500px;
       border: none;
-      box-shadow: 0 2px 12px rgba(124,77,255,0.13);
-    }
-    .description h2 {
-      color: #5e548e;
-      margin-top: 0;
-    }
-    .description p, .description li {
-      line-height: 1.8;
-      margin-bottom: 12px;
-    }
-    .description ul {
-      padding-left: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 16px rgba(124, 77, 255, 0.2);
     }
     .footer {
       color: #a89bc7;
-      padding-bottom: 20px;
-      font-size: 0.95rem;
+      padding-top: 20px;
+      font-size: 0.9rem;
       font-family: 'Pacifico', cursive;
+    }
+    p {
+      line-height: 1.8;
+      margin-bottom: 1em;
+    }
+    h2 {
+      color: #5e548e;
+      margin-top: 1em;
+      font-size: 1.3rem;
     }
   </style>
 </head>
@@ -93,49 +89,43 @@
   </header>
 
   <div class="button-group">
-    <button onclick="showSection('chart')">查看圖表</button>
-    <button onclick="showSection('text')">查看資料說明</button>
+    <button onclick="showSection('chart')">圖表展示</button>
+    <button onclick="showSection('text')">資料說明</button>
   </div>
 
-  <div class="container active" id="chart-section">
+  <!-- 圖表區塊 -->
+  <div id="chart" class="container active">
     <iframe title="A1123366_許韶庭_資料設計思考期末個人報告"
-      width="600"
-      height="373.5"
       src="https://app.powerbi.com/view?r=eyJrIjoiNjJlYmQ0NGUtZjJlNy00N2FjLWIyY2QtZjMwOGVmODIxOGVhIiwidCI6IjVhNDg0OTUzLTc3ZWYtNDJlYy05MGNmLTJmNGUxMDM3ZmZjNyIsImMiOjEwfQ%3D%3D"
-      frameborder="0"
-      allowFullScreen="true"></iframe>
+      allowFullScreen="true">
+    </iframe>
   </div>
 
-  <div class="description" id="text-section">
+  <!-- 說明區塊 -->
+  <div id="text" class="container">
     <h2>〈設計思考實作〉— 雙鑽石思考</h2>
 
-    <p><strong>1. 第 1 顆鑽石(找問題)的擴散與收斂</strong></p>
-    <ul>
-      <li><strong>問題擴散（Diverge）：</strong><br>在分析雨量與測站資料的過程中，發現資料量龐大且分布複雜，每日雨量記錄詳細但不易理解，且部分測站存在資料缺漏或異常值，讓資料的可靠性降低，種種問題將造成使用資料上的困難。對於一般使用者而言，若想掌握某地區的降雨趨勢與測站狀況，往往不知該從何處著手，原始資料雖然豐富，但不經整理與視覺化，便難以轉化為可用資訊。</li>
-      <li><strong>問題收斂（Converge）：</strong><br>雖然我們擁有詳細的每日雨量與測站資料，也可以查閱各月份的原始紀錄，但是使用者難以從龐大資料中快速判斷某地區的雨量趨勢與測站資料的有效性，因此需要透過視覺化整合這些資料，幫助使用者在操作及理解上能夠更為直觀。</li>
-    </ul>
+    <h3>1. 第 1 顆鑽石（找問題）的擴散與收斂</h3>
+    <p><strong>問題擴散（Diverge）：</strong>在分析雨量與測站資料的過程中，發現資料量龐大且分布複雜，每日雨量記錄詳細但不易理解，且部分測站存在資料缺漏或異常值，讓資料的可靠性降低。對於一般使用者而言，若想掌握某地區的降雨趨勢與測站狀況，原始資料雖然豐富，但不經整理與視覺化，便難以轉化為可用資訊。</p>
+    <p><strong>問題收斂（Converge）：</strong>雖然我們擁有詳細的每日雨量與測站資料，也可以查閱各月份的原始紀錄，但是使用者難以從龐大資料中快速判斷某地區的雨量趨勢與測站資料的有效性，因此需要透過視覺化整合這些資料，幫助使用者在操作及理解上更為直觀。</p>
 
-    <p><strong>2. 二顆鑽石之間的「問題意識」定義：</strong></p>
-    <p>在尋找問題的過程中，我意識到最大的問題並非資料本身的缺失，而是資料雖完整且已做了初步整理，但仍不足以使得非專業使用者從中得到有意義的資訊，以課上取得的氣象資料為例，雖然每日雨量、月份統計、測站名稱與測量紀錄都有詳實記載，但這些資訊原始呈現形式繁雜、數據過多，且缺乏視覺化支撐，導致在觀察地區差異、氣候變化趨勢，或測站可靠度時，使用者仍需花費大量時間處理前置作業。解方應聚焦在資料該如何被設計與呈現，才能真正幫助使用者去直觀的看見重點，不只是資料可不可得，而是使用者是否能用資料解決自身問題，因此我認為如何透過視覺互動化設計，降低這些氣象資料的閱讀門檻，提升使用者對降雨趨勢與測站的理解與掌握能力，才是最重要的。</p>
+    <h3>2. 二顆鑽石之間的「問題意識」定義</h3>
+    <p>在尋找問題的過程中，我意識到最大的問題並非資料本身的缺失，而是資料雖完整且已做了初步整理，但仍不足以使非專業使用者從中得到有意義的資訊。以課上取得的氣象資料為例，雖然每日雨量、月份統計、測站名稱與測量紀錄都有詳實記載，但這些資訊原始呈現形式繁雜、數據過多，且缺乏視覺化支撐，導致使用者在觀察地區差異、氣候變化趨勢或測站可靠度時仍需花費大量時間處理前置作業。</p>
+    <p>因此我認為，解方應聚焦在資料該如何被設計與呈現，才能真正幫助使用者去直觀地看見重點，不只是資料可不可得，而是使用者是否能用資料解決自身問題，進而提升理解與掌握能力。</p>
 
-    <p><strong>3. 第 2 顆鑽石(找解方)的擴散與收斂</strong></p>
-    <ul>
-      <li><strong>解方擴散（Diverge）：</strong><br>為了解決資料難以解讀的問題，我開始思考多種處理方式，例如：是否能使用視覺化工具呈現趨勢與異常？透過建立互動式圖表，讓使用者能夠選取或點擊特定地點與時間區間進行分析，也探討是否可將降雨資料與地理位置做結合，進一步觀察各測站的活躍度與穩定性，透過資料探勘，從大量數據中篩選出有價值的資訊，進而去提升資料的可解讀性與實用性。</li>
-      <li><strong>解方收斂（Converge）：</strong><br>建置一個互動式網頁，整合每日雨量、月份趨勢與測站，並透過 Power BI 的視覺化模組來進行動態圖表實作，這能夠幫助使用者在短時間內快速掌握資料變化，並透過簡單操作完成篩選與比對，透過這樣的資訊轉譯方式，不僅提升使用者體驗，也能讓資料的價值更直接地被看見與應用。</li>
-    </ul>
+    <h3>3. 第 2 顆鑽石（找解方）的擴散與收斂</h3>
+    <p><strong>解方擴散（Diverge）：</strong>為了解決資料難以解讀的問題，我思考多種處理方式，例如是否能使用視覺化工具呈現趨勢與異常，建立互動式圖表讓使用者點選特定地點與時間進行分析，也探討是否能將降雨資料與地理位置結合觀察測站活躍度與穩定性，進一步提升資料可解讀性與實用性。</p>
+    <p><strong>解方收斂（Converge）：</strong>建置一個互動式網頁，整合每日雨量、月份趨勢與測站資料，並透過 Power BI 的視覺化模組來實作動態圖表，讓使用者快速掌握資料變化，並完成篩選與比對，提升資料價值與使用者體驗。</p>
   </div>
 
+  <div class="footer">© A1123366 許韶庭</div>
+
   <script>
-    function showSection(section) {
-      const chart = document.getElementById('chart-section');
-      const text = document.getElementById('text-section');
-      if (section === 'chart') {
-        chart.classList.add('active');
-        text.classList.remove('active');
-      } else {
-        text.classList.add('active');
-        chart.classList.remove('active');
-      }
+    function showSection(id) {
+      document.querySelectorAll('.container').forEach(el => {
+        el.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
     }
   </script>
 </body>
